@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#121212">
+    <title>Blackjack Wear</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div id="loading-logo"></div>
+            <div id="loading-text">Preparing BlackJack...</div>
+            <div id="loading-progress-container">
+                <div id="progress-bar"></div>
+                <div id="progress-text">0%</div>
+            </div>
+            <div id="loading-tip">Tip: Shake device to start new game</div>
+            <div id="loading-status"></div>
+        </div>
+    </div>
+    
+    <div id="game-container">
+        <div id="dealer-section">
+            <div class="section-title">Dealer</div>
+            <div id="dealer-hand" class="hand"></div>
+            <div id="dealer-score" class="score">Score: ?</div>
+        </div>
+        
+        <div id="result"></div>
+        
+        <div id="player-section">
+            <div class="section-title">Player</div>
+            <div id="player-hand" class="hand"></div>
+            <div id="player-score" class="score">Score: 0</div>
+        </div>
+        
+        <div id="controls">
+            <button id="hit-button" class="game-button" aria-label="Hit" disabled>Hit</button>
+            <button id="stand-button" class="game-button" aria-label="Stand" disabled>Stand</button>
+            <button id="new-game-button" class="game-button" aria-label="New Game" disabled>New Game</button>
+        </div>
+        
+        <div id="stats">
+            <div class="stat-item">
+                <span>Wins: </span>
+                <span id="wins-count">0</span>
+            </div>
+            <div class="stat-item">
+                <span>Losses: </span>
+                <span id="losses-count">0</span>
+            </div>
+        </div>
+    </div>
+    
+    <div id="touch-protector"></div>
+    <div id="haptic-feedback"></div>
+    
+    <script src="cordova.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

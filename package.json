@@ -1,0 +1,38 @@
+{
+  "name": "blackjack-wearos-universal",
+  "displayName": "BlackJack Wear OS Universal",
+  "version": "1.4.0",
+  "description": "BlackJack for all Wear OS devices including Sony SmartWatch 3",
+  "main": "index.html",
+  "scripts": {
+    "build": "cordova build android",
+    "prepare": "cordova prepare",
+    "run": "cordova run android",
+    "release": "cordova build android --release -- --packageType=apk"
+  },
+  "dependencies": {
+    "cordova-android": "^12.0.0",
+    "cordova-plugin-whitelist": "^1.3.4",
+    "cordova-plugin-screen-orientation": "^3.0.2",
+    "cordova-plugin-device-motion": "^2.0.1",
+    "cordova-plugin-vibration": "^3.1.1",
+    "cordova-plugin-insomnia": "^4.3.0",
+    "cordova-plugin-compat": "^1.2.0"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-screen-orientation": {},
+      "cordova-plugin-device-motion": {},
+      "cordova-plugin-vibration": {},
+      "cordova-plugin-insomnia": {},
+      "cordova-plugin-compat": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  },
+  "devDependencies": {
+    "cordova": "^12.0.0"
+  }
+}

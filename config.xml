@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.ferkusteam.blackjack.wear" version="1.4.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>BlackJack Wear</name>
+    <description>BlackJack for all Wear OS devices</description>
+    <author email="ferkusteam@gmail.com" href="http://t.me/bkuzn">Ferkus Team</author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="AndroidLaunchMode" value="singleTop" />
+    <preference name="AndroidXEnabled" value="true" />
+    <preference name="GradlePluginGoogleServicesEnabled" value="false" />
+    <preference name="GradlePluginKotlinEnabled" value="true" />
+    <preference name="GradlePluginKotlinCodeStyle" value="official" />
+    <preference name="GradlePluginKotlinVersion" value="1.8.0" />
+    <preference name="target-device" value="wearable" />
+    <preference name="android-minSdkVersion" value="21" />
+    <preference name="android-targetSdkVersion" value="33" />
+    <preference name="KeepRunning" value="true" />
+    <preference name="LoadUrlTimeoutValue" value="60000" />
+    
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <icon src="res/icon/icon.png" />
+        <icon src="res/icon/icon-round.png" density="wear" />
+        <splash src="res/screen/android/splash.png" density="port-hdpi"/>
+        
+        <config-file parent="/manifest/application" target="AndroidManifest.xml">
+            <meta-data android:name="com.google.android.wearable.standalone" android:value="true" />
+            <uses-feature android:name="android.hardware.type.watch" />
+            <!-- Sony SmartWatch 3 support -->
+            <uses-feature android:name="android.hardware.screen.portrait" android:required="false" />
+            <uses-feature android:name="android.hardware.screen.landscape" android:required="false" />
+            <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+        </config-file>
+        
+        <resource-file src="res/values/wear.xml" target="app/src/main/res/values/wear.xml" />
+    </platform>
+</widget>
